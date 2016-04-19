@@ -7,7 +7,7 @@
 
 body, html {
     font-family: calibri;
-    font-size: .8em;
+    font-size: .9em;
 }
 
 .album{
@@ -17,7 +17,7 @@ body, html {
     overflow: hidden;
     margin: 1em;
     float: left;
-    position: relative;
+  
 }
 
 
@@ -28,16 +28,41 @@ body, html {
     height: 400px;
     padding: 1em;
     box-sizing: border-box;
-    transition: margin-top 1s;
+/*    Dit is de makkelijk...blijkbaar en je kan er niet teveel mee varieren*/
+/*    transition: margin-top 1s;*/
+/*    animation: springtBoven 1s forwards;*/
 }
 
 
 .album:hover article {
-    margin-top: -403px;
+/*    FOrward betekent dat het daar blijft*/
+    animation: springtBoven 1s forwards;
     
 }
 
+@keyframes springtBoven {
+    0% {margin-top: -403px;}
+    25% {margin-top: -0;}
+    35% {margin-top: -200px;}
+    50% {margin-top: -0;}
+    65% {margin-top: -100px;}
+    75% {margin-top: 0;}
+    90% {margin-top: -50px;}
+    100% {margin-top: 0;}
+  
+}
 
+
+@keyframes springtBoven {
+    0%  {margin-top: 0px;}
+    25% {margin-top: -403px;}
+    35% {margin-top: -203px}
+    50% {margin-top: -403px}
+    65% {margin-top: -303px}
+    75% {margin-top: -403px}
+    90% {margin-top: -360px}
+    100% {margin-top: -403px}
+}
 
 
 footer {
